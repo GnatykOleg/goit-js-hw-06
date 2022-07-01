@@ -13,6 +13,7 @@ const span = document.querySelector('.color');
 btn.addEventListener('click', changeColorFn);
 
 function changeColorFn() {
-  body.style.backgroundColor = `${getRandomHexColor()}`;
-  span.textContent = getRandomHexColor();
+  const rundomColor = getRandomHexColor();
+  body.style.backgroundColor = rundomColor;
+  span.textContent = rundomColor;
 }

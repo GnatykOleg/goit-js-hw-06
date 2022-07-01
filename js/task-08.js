@@ -20,7 +20,7 @@ function formSubmitFn(event) {
   } = event.currentTarget;
 
   if (email.value === '' || password.value === '') {
-    alert('Пожалуйста заполните все поля ввода данных');
+    return alert('Пожалуйста заполните все поля ввода данных');
   }
 
   const result = { email: email.value, password: password.value };
