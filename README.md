@@ -85,6 +85,8 @@ const images = [
 ];
 ```
 
+![task-3](./images/task-3.jpg)
+
 ## Task №4
 
 #### 1. The counter consists of a span and buttons that, when clicked, increase and decrease its value by one.
@@ -103,6 +105,8 @@ const images = [
 
 #### - The interface is updated with the new value of the `counterValue` variable.
 
+![task-4](./images/task-4.jpg)
+
 ## Task №5
 
 #### 1. A script has been written that, when typing text in the `input#name-input` input (`input` event), substitutes its current value in `span#name-output`. If the input is empty, the #### span should display the string `"Anonymous"`.
@@ -111,6 +115,8 @@ const images = [
 <input type="text" id="name-input" placeholder="Please enter your name" />
 <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 ```
+
+![task-5](./images/task-5.jpg)
 
 ## Task №6
 
@@ -129,6 +135,8 @@ const images = [
 
 #### - If the correct number of characters is entered, the `border` of the input becomes green, if the wrong number is red.
 
+![task-6](./images/task-6.jpg)
+
 ## Task №7
 
 #### 1. A script was written that responds to a change in the value of `input#font-size-control` (the `input` event) and changes the inline style of `span#text` by updating the property `font-size`. As a result, when you drag the slider, the text size will change.
@@ -138,6 +146,8 @@ const images = [
 <br />
 <span id="text">Abracadabra!</span>
 ```
+
+![task-7](./images/task-7.jpg)
 
 ## Task №8
 
@@ -167,6 +177,8 @@ const images = [
 
 #### 5. Displays the object with the entered data in the console and clear the values of the form fields using the `reset` method.
 
+![task-8](./images/task-8.jpg)
+
 ## Task №9
 
 #### 1. A script has been written that changes the background colors of the `<body>` element via inline style when clicking on `button.change-color` and displays the color value in `span.color`.
@@ -185,3 +197,5 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 ```
+
+![task-9](./images/task-9.jpg)
