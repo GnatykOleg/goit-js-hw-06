@@ -1,66 +1,14 @@
-# goit-js-hw-06
+# Javascript dom and events.
 
-# Критерии приема
+## Task №1
 
-- Создан репозиторий `goit-js-hw-06`.
-- При сдаче домашней работы есть две ссылки: на исходные файлы и рабочую
-  страницу на `GitHub Pages`.
-- Задания выполнены строго по ТЗ (нельзя изменять исходный HTML задания).
-- При посещении живой страницы задания, в консоли нету ошибок и предупреждений.
-- Имена переменных и функций понятные, описательные.
-- Код отформатирован `Prettier`.
+### A script has been written that:
 
-## Стартовые файлы
+#### 1. Counts and prints to the console the number of categories in `ul#categories`, i.e. `li.item` elements.
 
-[Скачай стартовые файлы](https://downgit.github.io/#/home?url=https://github.com/goitacademy/javascript-homework/tree/main/v2/06/src)
-с готовой разметкой и подключенными файлами скриптов для каждого задания.
-Скопируй их себе в проект.
+#### 2. For each `li.item` element in the `ul#categories` list, find and output to console element header text (`<h2>` tag) and the number of elements in category (all its nested `<li>`).
 
-## Задание 1
-
-В HTML есть список категорий `ul#categories`.
-
-```html
-<ul id="categories">
-  <li class="item">
-    <h2>Animals</h2>
-    <ul>
-      <li>Cat</li>
-      <li>Hamster</li>
-      <li>Horse</li>
-      <li>Parrot</li>
-    </ul>
-  </li>
-  <li class="item">
-    <h2>Products</h2>
-    <ul>
-      <li>Bread</li>
-      <li>Prasley</li>
-      <li>Cheese</li>
-    </ul>
-  </li>
-  <li class="item">
-    <h2>Technologies</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>React</li>
-      <li>Node.js</li>
-    </ul>
-  </li>
-</ul>
-```
-
-Напиши скрипт который:
-
-1. Посчитает и выведет в консоль количество категорий в `ul#categories`, то есть
-   элементов `li.item`.
-2. Для каждого элемента `li.item` в списке `ul#categories`, найдет и выведет в
-   консоль текст заголовка элемента (тега `<h2>`) и количество элементов в
-   категории (всех вложенных в него `<li>`).
-
-В результате, в консоли будут выведены такие сообщения.
+#### As a result, such messages will be displayed in the console.
 
 ```bash
 Number of categories: 3
@@ -75,15 +23,15 @@ Category: Technologies
 Elements: 5
 ```
 
-## Задание 2
+## Task №2
 
-В HTML есть пустой список `ul#ingredients`.
+#### 1. There is an empty `ul#ingredients` list in HTML.
 
 ```html
 <ul id="ingredients"></ul>
 ```
 
-В JavaScript есть массив строк.
+#### 2. JavaScript has an array of strings.
 
 ```js
 const ingredients = [
@@ -96,30 +44,29 @@ const ingredients = [
 ];
 ```
 
-Напиши скрипт, который для каждого элемента массива `ingredients`:
+#### 3. A script is written for each element of the `ingredients` array:
 
-1. Создаст отдельный элемент `<li>`. Обзательно используй метод
-   `document.createElement()`.
-2. Добавит название ингредиента как его текстовое содержимое.
-3. Добавит элементу класс `item`.
-4. После чего вставит все `<li>` за одну операцию в список `ul.ingredients`.
+#### 4. Create a separate `<li>` element.
 
-## Задание 3
+#### 5. Add the name of the ingredient as its text content.
 
-Напиши скрипт для создания галереи изображений по массиву данных. В HTML есть
-список `ul.gallery`.
+#### 6. Add the `item` class to the element.
+
+#### 7. Then it will insert all `<li>` in one operation into the `ul.ingredients` list.
+
+## Task №3
+
+#### 1. A script created an image gallery based on a data array. The HTML has list `ul.gallery`.
 
 ```html
 <ul class="gallery"></ul>
 ```
 
-Используй массив объектов `images` для создания элементов `<img>` вложенных в
-`<li>`. Для создания разметки используй шаблонные строки и метод
-`insertAdjacentHTML()`.
+#### 2. An array of `images` objects is used to create `<img>` elements nested in `<li>`. Template strings and the method are used to create markup. `insertAdjacentHTML()`.
 
-- Все элементы галереи должны добавляться в DOM за одну операцию вставки.
-- Добавь минимальное оформление галереи флексбоксами или гридами через CSS
-  классы.
+#### - All gallery elements must be added to the DOM in a single paste operation.
+
+#### - Added minimal gallery design.
 
 ```js
 const images = [
@@ -138,10 +85,9 @@ const images = [
 ];
 ```
 
-## Задание 4
+## Task №4
 
-Счетчик состоит из спана и кнопок, которые, при клике, должны увеличивать и
-уменьшать его значение на единицу.
+#### 1. The counter consists of a span and buttons that, when clicked, increase and decrease its value by one.
 
 ```html
 <div id="counter">
@@ -151,27 +97,24 @@ const images = [
 </div>
 ```
 
-- Создай переменную `counterValue` в которой будет храниться текущее значение
-  счетчика и инициализируй её значением `0`.
-- Добавь слушатели кликов на кнопки, внутри которых увеличивай или уменьшай
-  значение счтетчика.
-- Обновляй интерфейс новым значением переменной `counterValue`.
+#### - Created a variable `counterValue` which will store the current value of the counter and initialize it with the value `0`.
 
-## Задание 5
+#### - Added listeners for button clicks, inside which you can increase or decrease the counter value.
 
-Напиши скрипт который, при наборе текста в инпуте `input#name-input` (событие
-`input`), подставляет его текущее значение в `span#name-output`. Если инпут
-пустой, в спане должна отображаться строка `"Anonymous"`.
+#### - The interface is updated with the new value of the `counterValue` variable.
+
+## Task №5
+
+#### 1. A script has been written that, when typing text in the `input#name-input` input (`input` event), substitutes its current value in `span#name-output`. If the input is empty, the #### span should display the string `"Anonymous"`.
 
 ```html
 <input type="text" id="name-input" placeholder="Please enter your name" />
 <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 ```
 
-## Задание 6
+## Task №6
 
-Напиши скрипт, который при потере фокуса на инпуте (событие `blur`), проверяет
-его содержимое на правильное количество введённых символов.
+#### 1. A script has been written that checks its contents for the correct number of entered characters when the focus is lost on an input (the `blur` event).
 
 ```html
 <input
@@ -182,34 +125,13 @@ const images = [
 />
 ```
 
-- Сколько символов должно быть в инпуте, указывается в его атрибуте
-  `data-length`.
-- Если введено подходящее количество символов, то `border` инпута становится
-  зелёным, если неправильное - красным.
+#### - How many characters should be in the input is specified in its `data-length` attribute.
 
-Для добавления стилей, используй CSS-классы `valid` и `invalid`, которые мы уже
-добавили в исходные файлы задания.
+#### - If the correct number of characters is entered, the `border` of the input becomes green, if the wrong number is red.
 
-```css
-#validation-input {
-  border: 3px solid #bdbdbd;
-}
+## Task №7
 
-#validation-input.valid {
-  border-color: #4caf50;
-}
-
-#validation-input.invalid {
-  border-color: #f44336;
-}
-```
-
-## Задание 7
-
-Напиши скрипт, который реагирует на изменение значения `input#font-size-control`
-(событие `input`) и изменяет инлайн-стиль `span#text` обновляя свойство
-`font-size`. В результате при перетаскивании ползунка будет меняться размер
-текста.
+#### 1. A script was written that responds to a change in the value of `input#font-size-control` (the `input` event) and changes the inline style of `span#text` by updating the property `font-size`. As a result, when you drag the slider, the text size will change.
 
 ```html
 <input id="font-size-control" type="range" min="16" max="96" />
@@ -217,9 +139,9 @@ const images = [
 <span id="text">Abracadabra!</span>
 ```
 
-## Задание 8
+## Task №8
 
-Напиши скрипт управления формой логина.
+#### The login form control script has been written.
 
 ```html
 <form class="login-form">
@@ -235,20 +157,19 @@ const images = [
 </form>
 ```
 
-1. Обработка отправки формы `form.login-form` должна быть по событию `submit`.
-2. При отправке формы страница не должна перезагружаться.
-3. Если в форме есть незаполненные поля, выводи `alert` с предупреждением о том,
-   что все поля должны быть заполнены.
-4. Если пользователь заполнил все поля и отправил форму, собери значения полей в
-   обьект, где имя поля будет именем свойства, а значение поля - значением
-   свойства. Для доступа к элементам формы используй свойство `elements`.
-5. Выведи обьект с введенными данными в консоль и очисти значения полей формы
-   методом `reset`.
+#### 1. Handling the submission of the `form.login-form` form must be on the `submit` event.
 
-## Задание 9
+#### 2. When submitting the form, the page should not be reloaded.
 
-Напиши скрипт, который изменяет цвета фона элемента `<body>` через инлайн стиль
-при клике на `button.change-color` и выводит значение цвета в `span.color`.
+#### 3. If the form has blank fields, print an `alert` warning that all fields must be filled.
+
+#### 4. If the user has filled in all the fields and submitted the form, collect the field values into an object where the field name will be the property name and the field value will be the property value.
+
+#### 5. Displays the object with the entered data in the console and clear the values of the form fields using the `reset` method.
+
+## Task №9
+
+#### 1. A script has been written that changes the background colors of the `<body>` element via inline style when clicking on `button.change-color` and displays the color value in `span.color`.
 
 ```html
 <div class="widget">
@@ -257,11 +178,10 @@ const images = [
 </div>
 ```
 
-Для генерации случайного цвета используй функцию `getRandomHexColor`.
+#### 2. The `getRandomHexColor` function is used to generate a random color.
 
 ```js
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 ```
-
